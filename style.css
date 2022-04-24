@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'Unicod';
+    src: url('UNicod Sans.woff') format('woff');
+}
+
+* {
+	font-family: Unicod;
+	text-align: center;
+	transition-duration: 0.5s;
+}
+
+html, body, #app {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	color: white;
+	text-shadow: 0px 0px 6px white;
+	overflow-x: hidden;
+	background-color: black;
+	margin: 0;
+	padding: 0;
+}
+
+.locked {
+	background-color: #820000;
+	color: white;
+	cursor: not-allowed;
+}
+
+.unlocked {
+	background-color: #607564;
+	color: white;
+	cursor: pointer;
+}
+
+.unlocked:hover {
+	background-color: #74b080;
+}
+
+.bought {
+	background-color: #13f23d;
+	color: black;
+	cursor: default;
+}
+
+table, tr, .table {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+	flex-flow: column wrap;
+}
+
+tr, .tableRow {
+    flex-flow: row wrap;
+}
+
+button {
+	border: solid 3px white;
+	background-color: white;
+    font-size: 14px;
+	cursor: default;
+	width: 150px;
+	height: 150px;
+}
+
+button.small {
+	width: 75px;
+	height: 40px;
+}
+
+button.big {
+	width: 150px;
+	height: 150px;
+}
+
+button.wide {
+	width: 200px;
+}
+
+button.unlocked:hover {
+	filter: sepia(150%);
+	filter: brightness(80%);
+	cursor: pointer;
+}
+
+button.options, button.options_btn {
+	border-radius: 10%;
+	background-color: #8a8a8a;
+	color: white;
+	border: solid 4px grey;
+	min-width: 80px;
+}
+
+button.locked {
+	cursor: not-allowed;
+	background-color: red;
+	color: white;
+}
+
+button.bought {
+	cursor: default;
+	background-color: #49824d;
+	color: white;
+}
+
+.btnlink {
+	display: inline-block;
+	text-decoration: none;
+	border: solid 3px white;
+	border-radius: 10%;
+	background-color: white;
+	color: black;
+    font-size: 14px;
+	cursor: default;
+	width: 75px;
+	height: 40px;
+	font-size: 25px;
+}
+
+.btnlink:not(.invLink):hover {
+	filter: sepia(150%);
+	filter: brightness(80%);
+	cursor: pointer;
+}
+
+.invLink {
+	filter: invert(100%);
+}
+
+.invLink:hover {
+	filter: invert(80%);
+	cursor: pointer;
+}
+
+#titleBanner {
+	height: 125px;
+	background-color: #9e95a3;
+	font-weight: bold;
+	user-select: none;
+	font-size: 75px;
+	border-bottom: 5px solid white;
+}
+
+#titleBanner:hover {
+	cursor: default;
+}
+
+#tabBanner {
+	height: 50px;
+	background-color: black;
+	font-weight: bold;
+	user-select: none;
+	font-size: 20px;
+	border-bottom: 5px solid white;
+}
+
+#tabBanner:hover {
+	cursor: default;
+}
+
+.jac {
+	background: radial-gradient(
+			ellipse farthest-corner at left bottom,
+			#8639fa 0%,
+			#6f2dfc 8%,
+			#4d289c 30%,
+			#40318f 40%,
+			transparent 80%
+		),
+		radial-gradient(
+			ellipse farthest-corner at right top,
+			#888888 0%,
+			#a18cbf 8%,
+			#7e4a9e 25%,
+			#471c57 62.5%,
+			#471c57 100%
+		);
+	background-size: 200% 200%;
+	background-position: 0% 50%;
+	text-shadow: none;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	color: transparent;
+	animation: jac 10s ease infinite;
+}
+
+.jacBG {
+	background: radial-gradient(
+			ellipse farthest-corner at left bottom,
+			#8639fa 0%,
+			#6f2dfc 8%,
+			#4d289c 30%,
+			#40318f 40%,
+			transparent 80%
+		),
+		radial-gradient(
+			ellipse farthest-corner at right top,
+			#888888 0%,
+			#a18cbf 8%,
+			#7e4a9e 25%,
+			#471c57 62.5%,
+			#471c57 100%
+		);
+	background-size: 200% 200%;
+	background-position: 0% 50%;
+	animation: jac 30s ease infinite;
+}
+
+@keyframes jac {
+	0% { background-position: 0% 50%; }
+	12.5% { background-position: 25% 25%; }
+	25% { background-position: 50% 0%; }
+	37.5% { background-position: 75% 25%; }
+	50% { background-position: 100% 50%; }
+	62.5% { background-position: 75% 75%; }
+	25% { background-position: 50% 100%; }
+	87.5% { background-position: 25% 75%; }
+	100% { background-position: 0% 50%; }
+}
